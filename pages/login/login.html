@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{"paginas.login.titulo"|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                <ion-label floating >{{"global.labels.email"|translate}}</ion-label>
+                <ion-input name="email" [(ngModel)]="credencial.email"></ion-input>
+              </ion-item>
+              </ion-col>
+            </ion-row>
+  
+              <ion-row>
+                  <ion-col>
+                    <ion-item>
+                    <ion-label floating>{{"global.labels.password"|translate}}</ion-label>
+                    <ion-input type="password"  name="senha" [(ngModel)]="credencial.senha"></ion-input>
+                  </ion-item>
+                  </ion-col>
+              </ion-row>
+  
+                <ion-row>
+                  <ion-col>
+                    <button ion-button full color="primary" class="btnLogin" (click)="loginComCredencial()">
+                          {{"global.inputs.login"|translate}}
+                    </button>
+                  </ion-col>
+                </ion-row>
+  
+                  <ion-row>
+                    <ion-col width-5>
+                      
+                      <button ion-button full icon-only (click)="loginComFacebook()" class="btnLogin">
+                          <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>                       
+                          {{"global.inputs.login_facebook"|translate}}
+                      </button>
+                    </ion-col>
+                  </ion-row>
+  
+                    <ion-row>
+                      <ion-col width-5>
+                        <button ion-button full icon-only class="btnLogin" color="danger" (click)="loginComGoogle()">
+                          <ion-icon name="logo-google"></ion-icon>                          
+                          {{"global.inputs.login_google"|translate}}
+                        </button>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                        <a (click)="doRegister()">
+                            {{"global.inputs.registrar"|translate}}
+                        </a>
+                      </ion-col>
+                    </ion-row>
+          </ion-grid>
+  </ion-content>
+  

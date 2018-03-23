@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        {{"paginas.contatos.titulo"|translate}}
+      </ion-title>
+    </ion-navbar>
+   </ion-header>
+<ion-content id="page3">
+    <ion-searchbar padding placeholder='{{"global.placeholder.pesquisarcontato"|translate}}' name="" id="contato" (keyup)="setPesquisa($event)"></ion-searchbar>
+
+  <ion-list id="contatos-list4" [virtualScroll]="ListaContatos">
+      <ion-item-sliding *virtualItem="let contato" color="positive" id="contatos-list-item21"  >  
+      <ion-item >
+          <ion-avatar item-left (click)="verContato(contato)">
+            <img src='{{contato.fotoURL}}'>
+          </ion-avatar>
+          <h2 (click)="setConversa(contato)">
+            {{contato.nome}}
+          </h2>
+        </ion-item>  
+          <ion-item-options>
+              <button ion-button clear icon-only (click)="deletarConversa(contato)">
+                <ion-icon name="trash"></ion-icon>
+              </button>  
+          </ion-item-options>
+        
+        </ion-item-sliding>
+      </ion-list>
+       
+      <ion-fab bottom right>
+        <button ion-fab color="primary" (click)="newGrupo()">
+           <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-fab>     
+</ion-content>
+

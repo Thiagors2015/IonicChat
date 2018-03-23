@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{contato.nome}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="conversa">
+   
+    <ion-list id="contatos-list4" [virtualScroll]="mensagens" class="chat">
+        <ion-item  *virtualItem="let mensagem" >
+          <div  [ngClass]="(mensagem.from.uid==contato.uid)?'self':'other'" id="chats">
+          <div class="avatar"><img src='{{(mensagem.from.uid==contato.uid)?contato.fotoURL:usuario.fotoURL}}' draggable="false"/></div>            
+              <div class="msg">
+                {{mensagem.texto}}
+
+              <time>{{mensagem.hora}}</time>
+              </div>
+              </div>
+            </ion-item>
+      </ion-list>   
+</ion-content>
+<ion-footer>
+  <ion-grid>
+      <ion-row>
+              <ion-item col-10>
+                  <ion-label floating>
+                    Mensagem:
+                  </ion-label>
+                  <ion-input type="text" icon-only [(ngModel)]="envmensagem" (keyup.enter)="enviar()">
+                      
+                  </ion-input>
+                </ion-item>
+                <ion-item col-2 (click)="enviar()">
+                    <ion-icon ios="ios-send" md="md-send"></ion-icon>
+                </ion-item>
+        </ion-row>
+  </ion-grid>
+         
+</ion-footer>

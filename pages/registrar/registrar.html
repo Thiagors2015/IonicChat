@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{"paginas.conversa-chat.titulo"|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+        <ion-card>
+          <ion-card-header>                  
+          </ion-card-header>
+          <ion-card-content>
+                <ion-grid>
+                  <ion-row>
+                          <ion-col>
+                            <ion-item>
+                              <ion-label floating>
+                                  {{"global.labels.email"|translate}}
+                              </ion-label>
+                              <ion-input type="email" name="email" [(ngModel)]="credencial.email"></ion-input>
+                            </ion-item>
+                          </ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col>
+                        <ion-item>
+                          <ion-label floating>
+                              {{"global.labels.password"|translate}}
+                          </ion-label>
+                          <ion-input type="password" name="senha" [(ngModel)]="credencial.senha"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                 </ion-row>
+                 <ion-row>
+                    <ion-col>         
+                        <button ion-button full (click)="doRegister()" >{{"global.buttons.salvar"|translate}}</button>
+                    </ion-col>
+                </ion-row>
+                </ion-grid>
+          </ion-card-content>
+        </ion-card>
+</ion-content>

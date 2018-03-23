@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar color="primary" >
+    <ion-title>{{"paginas.contas.titulo"|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-grid>
+        <ion-row class="img">
+            <ion-col >
+              <ion-item (click)="AlterarFoto()">
+                    <ion-avatar item-left>
+                        <ion-icon ios="ios-camera" md="md-camera"></ion-icon>
+                      <img src='{{usuario.fotoURL}}'/>
+                    </ion-avatar>                      
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+                  <ion-col>
+                    <ion-item>
+                          <ion-label floating>
+                              {{"global.labels.nome"|translate}}
+                          </ion-label>
+                          <ion-input type="text" name="nome" [(ngModel)]="usuario.nome"></ion-input>
+                    </ion-item>
+                  </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                  <ion-item>
+                        <ion-label floating>
+                            {{"global.labels.email"|translate}}
+                        </ion-label>
+                        <ion-input  type="email" name="email" [(ngModel)]="usuario.email"></ion-input>
+                  </ion-item>
+                </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <ion-item>
+                      <ion-label floating>
+                        {{"global.labels.telefone"|translate}}
+                      </ion-label>
+                      <ion-input type="text" name="telefone" [(ngModel)]="usuario.telefone"></ion-input>
+                </ion-item>
+              </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                    <button ion-button full icon-only color="primary" name="salvar" (click)="Salvar()" >
+                        {{"global.buttons.salvar"|translate}}
+                    </button>
+            </ion-col>
+      </ion-row>
+   </ion-grid>
+</ion-content>

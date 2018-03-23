@@ -1,0 +1,44 @@
+{
+    "paginas":{
+        "contatos":{
+            "titulo":"Contatos"
+        },
+        "conversa-chat":{
+            "titulo":"Conversa"
+        },
+        "conversas":{
+            "titulo":"Conversas Recentes"
+        },
+        "login":{
+            "titulo":"Conectar"
+        },
+        "registrar":{
+            "titulo":"Registrar-se"
+        },
+        "contas":{
+            "titulo":"Perfil"
+        }
+    },
+    "global":{
+        "inputs":{
+            "login":"Logar",
+            "login_facebook":"Logar com Facebook",
+            "login_google":"Logar com Google",
+            "registrar":"Registrar-se"
+        },
+        "buttons":{
+            "salvar":"Salvar",
+            "alterarFoto":"Alterar Foto"    
+        },
+        "labels":{
+            "email":"E-mail",
+            "password":"Senha",
+            "telefone":"Telefone",
+            "nome":"Nome"          
+        },
+        "placeholder":{
+            "pesquisarconversa":"Pesquisar Conversa",
+            "pesquisarcontato":"Pesquisar Contato"
+        }
+    }
+}
